@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <p>Estrai 5 numeri in console</p>
+
+
+
+    <script>
+        // var numeri = [];
+
+        // for (let i = 0; i < 5; i++) {
+        //     var numero = Math.ceil(Math.random()*90);
+        //     if(numeri.indexOf(numero)!=-1) {
+        //     i--;
+        //     }else{
+        //      numeri.push(numero)
+        //      i++;
+        //     }
+        // }
+        // console.log(numeri);
+
+        var numeri = [];
+
+        while (numeri.length < 5) {
+            var numero = Math.ceil(Math.random() * 90);
+            if (numeri.indexOf(numero) == -1) {
+                numeri.push(numero)
+            }
+        }
+        console.log(numeri);
+    </script>
+</body>
+
+</html>

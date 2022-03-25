@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <input type="text" name="mioTesto" id="mioTesto">
+    <button type="button" id="btn">Testa Input</button>
+    <p id="demo"></p>
+
+    <script>
+        var btn = document.querySelector('#btn');
+
+        function controlla() {
+            var demo = document.querySelector('#demo')
+            var txt = document.querySelector('#mioTesto').value;
+            demo.innerHTML = '';
+
+            try {
+                if (txt == '') throw "campo vuoto";
+                if (isNaN(txt)) throw "non è un numero";
+
+                txt = Number(txt);
+
+                if (txt > 10) throw "numero troppo alto";
+                if (txt < 5) throw "numero troppo basso"
+
+            } catch (error) {
+                demo.innerHTML = "Errore " + error;
+            } finally {
+                document.getElementById('mioTesto').value = '';
+            }
+        }
+
+        btn.addEventListener('click', controlla, false)
+    </script>
+
+
+</body>
+
+</html>

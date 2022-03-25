@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+
+    <!-- <button id="btn" onclick="saluta()"></button> -->
+
+    <button id="btn">Saluta</button>
+
+    <div id="demo" class="dimDiv animate__animated animate__flip"></div>
+
+
+
+    <script>
+        function saluta(nome) {
+            // console.log("ciao " + nome);
+            console.log(`ciao ${nome}`);
+        }
+
+        var btn = document.getElementById('btn');
+
+        //Gestore eventi in JS
+
+        //btn.onclick = saluta;
+
+        //EVENT LISTENER
+        // btn.addEventListener('click', saluta('Dani') , false); // la fnzione viene richiamata senza ()
+
+        //se ho dei parametri wrappo tutto con una funziona anonima
+        btn.addEventListener('click', function () {
+            saluta('Dani')
+        }, false);
+
+
+
+        //EVENT LISTENER con Arrow Function
+
+        var demo = document.querySelector('#demo');
+        const primaFunz = () => console.log("sono una funziona globare");
+        const secondaFunz = () => console.log("sono anche io una funziona globale");
+
+        demo.addEventListener('mouseenter', () => {
+            primaFunz();
+            secondaFunz();
+
+            demo.classList.add('animate__animated','animate__flip')
+
+        });
+
+
+        demo.addEventListener('mouseout',() =>{
+            console.log("sono fuori");
+            demo.classList.remove('animate__animated','animate__flip')
+        })
+
+    </script>
+
+</body>
+
+</html>

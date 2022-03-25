@@ -1,0 +1,24 @@
+*{
+    box-sizing: border-box;
+}
+
+.dimDiv{
+    width: 200px;
+    height: 200px;
+    background-color: blue;
+    border: 1px solid black;
+    margin-top: 50px;
+    margin-left: 50px;
+}
+
+.warning{
+    color: green;
+}
+
+.danger{
+    color: rgb(255, 0, 0);
+}
+
+ul li.barrato{
+    text-decoration: line-through;
+}

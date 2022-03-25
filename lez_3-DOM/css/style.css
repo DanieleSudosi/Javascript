@@ -1,0 +1,28 @@
+.blue{
+    color:blue
+}
+.red{
+    color: red;
+}
+.fontUp{
+    font-size: 24px;
+}
+
+.dimImg{
+    width: 150px;
+    height: auto;
+}
+
+li{
+    list-style-type: none;
+    position: relative;
+    margin: 2px;
+    padding: 1em;
+    background-color: aliceblue;
+
+}
+
+li.done{
+    color: green;
+    text-decoration: line-through;
+}
